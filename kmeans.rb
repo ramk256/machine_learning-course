@@ -1,10 +1,6 @@
 
-
-# this class will be generic and flexible 
-#
-#
-
-
+# this class is a simple implementation of the K means algorithm
+# It is a way to cluster data points, an unsupervised learning technique
 class KMeans
  
   #a data point has a name, data, and a centroid_info 
