@@ -20,7 +20,6 @@ def computeCost(inputX, inputY, theta)
     else
       cur_error += -Math.log(1 - hypothesis_val)
     end
-   # cur_error += (-y_val) * Math.log(hypothesis_val) - (1 - y_val) * Math.log(1 - hypothesis_val)
   end
   cur_error /= inputY.length
   
@@ -29,16 +28,8 @@ end
 
 def get_hypothesis_val(inputX, inputY, theta, i)
   sigmoid_input = inputX[2 * i].to_f * theta[1] + inputX[2 * i + 1].to_f * theta[2] + theta[0]
-#  puts "hypothesis value is" + sigmoid(sigmoid_input).to_s
+
   sig_val = sigmoid(sigmoid_input)
-  
-#  if (sig_val >= 0.5)
-#    puts "hyp value is " + 1.0.to_s
- #   return 1.0
-  #else
-   # puts "hyp value is " + 0.0.to_s
-    #return 0.0
- # end
 end
 
 def logisticRegression(inputX, inputY, theta, num_iter, alpha)
